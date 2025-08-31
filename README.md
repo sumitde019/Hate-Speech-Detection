@@ -31,12 +31,11 @@ The web app provides a simple text input box where users can enter any text, and
 ## 🔹 Project Structure
 ```
 my-app/
-  |-- app.py # Streamlit app (main entry point)
+  |── app.py # Streamlit app (main entry point)
   │── twitter.csv # Dataset used for training
   │── requirements.txt # Python dependencies
   │── README.md # Project documentation
-  │── model.pkl # (Optional) Pre-trained Decision Tree model
-  │── vectorizer.pkl # (Optional) Pre-trained CountVectorizer
+  │── Hate_Speech_Detection_Model.ipynb
 ```
 
 ---
