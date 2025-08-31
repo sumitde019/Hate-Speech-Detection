@@ -1,8 +1,8 @@
 # 🚨 Hate Speech & Offensive Language Detector
 
-> A Streamlit web app that detects Hate Speech, Offensive Language, or Neutral text in tweets.  
-> It uses **NLTK for preprocessing** and a **Decision Tree Classifier** from Scikit-Learn.  
-> This project demonstrates how to clean text, train a classifier, and deploy an interactive ML app.
+- A Streamlit web app that detects Hate Speech, Offensive Language, or Neutral text in tweets.  
+- It uses **NLTK for preprocessing** and a **Decision Tree Classifier** from Scikit-Learn.  
+- This project demonstrates how to clean text, train a classifier, and deploy an interactive ML app.
 
 ---
 
@@ -29,3 +29,34 @@ The web app provides a simple text input box where users can enter any text, and
 ---
 
 ## 🔹 Project Structure
+```
+my-app/
+  |-- app.py # Streamlit app (main entry point)
+  │── twitter.csv # Dataset used for training
+  │── requirements.txt # Python dependencies
+  │── README.md # Project documentation
+  │── model.pkl # (Optional) Pre-trained Decision Tree model
+  │── vectorizer.pkl # (Optional) Pre-trained CountVectorizer
+```
+
+---
+
+## 🔹 How It Works
+
+1. **User Input**  
+   - The user enters text in a Streamlit input box.
+
+2. **Text Cleaning**  
+   - Convert text to lowercase.  
+   - Remove links, numbers, punctuation, HTML tags, and newlines.  
+   - Remove stopwords using **NLTK**.  
+   - Apply **stemming** using the Snowball Stemmer.
+
+3. **Feature Extraction**  
+   - Convert the cleaned text into numerical features using **CountVectorizer**.
+
+4. **Prediction**  
+   - Pass the features to the trained **Decision Tree Classifier**.
+
+5. **Output**  
+   - Display the prediction: **Hate Speech**, **Offensive Language**, or **No Hate/Offensive**.
